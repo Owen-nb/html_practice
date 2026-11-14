@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 标签速查表</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 24px 16px 60px;
+            line-height: 1.6;
+            color: #222;
+            background: #fff;
+        }
+        h1 {
+            font-size: 1.4rem;
+            margin: 0 0 16px;
+        }
+        #search {
+            width: 100%;
+            padding: 10px 12px;
+            font-size: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            outline: none;
+        }
+        #search:focus {
+            border-color: #4a90d9;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px 10px;
+            border-bottom: 1px solid #ececec;
+            vertical-align: top;
+        }
+        th {
+            font-weight: 600;
+            background: #f7f7f7;
+            position: sticky;
+            top: 0;
+        }
+        tr.group td {
+            background: #fafafa;
+            font-weight: 600;
+            padding-top: 18px;
+            border-bottom: 1px solid #ddd;
+        }
+        code {
+            background: #f2f2f2;
+            padding: 1px 5px;
+            border-radius: 4px;
+            font-family: ui-monospace, Consolas, monospace;
+            font-size: 13px;
+        }
+        .tag code {
+            white-space: nowrap;
+        }
+        #empty {
+            color: #888;
+            text-align: center;
+            padding: 24px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML 标签速查表</h1>
+    <input type="search" id="search" placeholder="搜索标签或说明，例如：列表、a、form">
+
+    <table id="tagTable">
+        <thead>
+            <tr>
+                <th>标签</th>
+                <th>说明</th>
+                <th>示例</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr class="group"><td colspan="3">文档结构</td></tr>
+            <tr><td class="tag"><code>&lt;html&gt;</code></td><td>根元素，包含整份文档</td><td><code>&lt;html lang="zh-CN"&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;head&gt;</code></td><td>元信息，不会显示在页面上</td><td><code>&lt;head&gt;…&lt;/head&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;body&gt;</code></td><td>页面可见内容</td><td><code>&lt;body&gt;…&lt;/body&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;div&gt;</code></td><td>块级容器，用于布局分组</td><td><code>&lt;div class="box"&gt;…&lt;/div&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;span&gt;</code></td><td>行内容器，用于局部样式</td><td><code>&lt;span style="color:red"&gt;红字&lt;/span&gt;</code></td></tr>
+        </tbody>
+
+        <tbody>
+            <tr class="group"><td colspan="3">文本</td></tr>
+            <tr><td class="tag"><code>&lt;h1&gt; ~ &lt;h6&gt;</code></td><td>标题，数字越大级别越低</td><td><code>&lt;h1&gt;标题&lt;/h1&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;p&gt;</code></td><td>段落</td><td><code>&lt;p&gt;一段文字&lt;/p&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;br&gt;</code></td><td>换行（单标签）</td><td><code>第一行&lt;br&gt;第二行</code></td></tr>
+            <tr><td class="tag"><code>&lt;hr&gt;</code></td><td>水平分隔线（单标签）</td><td><code>&lt;hr&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;strong&gt;</code></td><td>重要内容，默认加粗</td><td><code>&lt;strong&gt;注意&lt;/strong&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;em&gt;</code></td><td>强调，默认斜体</td><td><code>&lt;em&gt;强调&lt;/em&gt;</code></td></tr>
+        </tbody>
+
+        <tbody>
+            <tr class="group"><td colspan="3">列表</td></tr>
+            <tr><td class="tag"><code>&lt;ul&gt;</code></td><td>无序列表</td><td><code>&lt;ul&gt;&lt;li&gt;项&lt;/li&gt;&lt;/ul&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;ol&gt;</code></td><td>有序列表</td><td><code>&lt;ol&gt;&lt;li&gt;项&lt;/li&gt;&lt;/ol&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;li&gt;</code></td><td>列表项，放在 ul / ol 内</td><td><code>&lt;li&gt;列表项&lt;/li&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;dl&gt; &lt;dt&gt; &lt;dd&gt;</code></td><td>描述列表：术语 + 解释</td><td><code>&lt;dt&gt;HTML&lt;/dt&gt;&lt;dd&gt;超文本标记语言&lt;/dd&gt;</code></td></tr>
+        </tbody>
+
+        <tbody>
+            <tr class="group"><td colspan="3">链接与媒体</td></tr>
+            <tr><td class="tag"><code>&lt;a href=""&gt;</code></td><td>超链接</td><td><code>&lt;a href="https://example.com"&gt;链接&lt;/a&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;img src="" alt=""&gt;</code></td><td>图片（单标签），alt 为替代文字</td><td><code>&lt;img src="a.png" alt="图片"&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;video&gt;</code> / <code>&lt;audio&gt;</code></td><td>视频 / 音频</td><td><code>&lt;video src="a.mp4" controls&gt;&lt;/video&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;iframe src=""&gt;</code></td><td>嵌入另一个页面</td><td><code>&lt;iframe src="a.html"&gt;&lt;/iframe&gt;</code></td></tr>
+        </tbody>
+
+        <tbody>
+            <tr class="group"><td colspan="3">表格</td></tr>
+            <tr><td class="tag"><code>&lt;table&gt;</code></td><td>表格容器</td><td><code>&lt;table&gt;…&lt;/table&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;tr&gt;</code></td><td>表格行</td><td><code>&lt;tr&gt;…&lt;/tr&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;th&gt;</code></td><td>表头单元格，默认加粗居中</td><td><code>&lt;th&gt;姓名&lt;/th&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;td&gt;</code></td><td>普通单元格</td><td><code>&lt;td&gt;张三&lt;/td&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;thead&gt;</code> / <code>&lt;tbody&gt;</code></td><td>表头 / 表体分组</td><td><code>&lt;thead&gt;…&lt;/thead&gt;</code></td></tr>
+        </tbody>
+
+        <tbody>
+            <tr class="group"><td colspan="3">表单</td></tr>
+            <tr><td class="tag"><code>&lt;form&gt;</code></td><td>表单容器</td><td><code>&lt;form action="/submit" method="post"&gt;…&lt;/form&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;input&gt;</code></td><td>输入控件，type 决定形态</td><td><code>&lt;input type="text" placeholder="请输入"&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;textarea&gt;</code></td><td>多行文本输入</td><td><code>&lt;textarea rows="4"&gt;&lt;/textarea&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;select&gt; &lt;option&gt;</code></td><td>下拉选择</td><td><code>&lt;select&gt;&lt;option&gt;A&lt;/option&gt;&lt;/select&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;button&gt;</code></td><td>按钮</td><td><code>&lt;button type="submit"&gt;提交&lt;/button&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;label&gt;</code></td><td>表单说明，可通过 for 关联控件</td><td><code>&lt;label for="name"&gt;姓名&lt;/label&gt;</code></td></tr>
+        </tbody>
+
+        <tbody>
+            <tr class="group"><td colspan="3">语义化标签</td></tr>
+            <tr><td class="tag"><code>&lt;header&gt;</code></td><td>页头区域</td><td><code>&lt;header&gt;…&lt;/header&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;nav&gt;</code></td><td>导航区域</td><td><code>&lt;nav&gt;…&lt;/nav&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;main&gt;</code></td><td>页面主体内容（每页一个）</td><td><code>&lt;main&gt;…&lt;/main&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;section&gt;</code></td><td>按主题划分的区块</td><td><code>&lt;section&gt;…&lt;/section&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;article&gt;</code></td><td>独立完整的内容单元</td><td><code>&lt;article&gt;…&lt;/article&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;footer&gt;</code></td><td>页脚区域</td><td><code>&lt;footer&gt;…&lt;/footer&gt;</code></td></tr>
+        </tbody>
+
+        <tbody>
+            <tr class="group"><td colspan="3">&lt;head&gt; 中常用</td></tr>
+            <tr><td class="tag"><code>&lt;meta charset&gt;</code></td><td>字符编码，防止中文乱码</td><td><code>&lt;meta charset="UTF-8"&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;meta viewport&gt;</code></td><td>移动端适配</td><td><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;title&gt;</code></td><td>浏览器标签页标题</td><td><code>&lt;title&gt;页面标题&lt;/title&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;link&gt;</code></td><td>引入外部资源，如 CSS</td><td><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></td></tr>
+            <tr><td class="tag"><code>&lt;script&gt;</code></td><td>引入或内联 JavaScript</td><td><code>&lt;script src="app.js"&gt;&lt;/script&gt;</code></td></tr>
+        </tbody>
+    </table>
+
+    <p id="empty" hidden>没有匹配的标签</p>
+
+    <script>
+        const search = document.getElementById('search');
+        const empty = document.getElementById('empty');
+        const groups = document.querySelectorAll('#tagTable tbody');
+
+        search.addEventListener('input', () => {
+            const keyword = search.value.trim().toLowerCase();
+            let hasMatch = false;
+
+            groups.forEach(group => {
+                let groupHasMatch = false;
+
+                group.querySelectorAll('tr:not(.group)').forEach(row => {
+                    const match = row.textContent.toLowerCase().includes(keyword);
+                    row.hidden = keyword !== '' && !match;
+                    if (!row.hidden) groupHasMatch = true;
+                });
+
+                group.hidden = !groupHasMatch;
+                if (groupHasMatch) hasMatch = true;
+            });
+
+            empty.hidden = hasMatch;
+        });
+    </script>
+
+</body>
+</html>
